@@ -17,7 +17,7 @@ int main(){
         printf("%d is largest.\n",num2);
     }
     else{
-         printf("%d is largest./n",num3);
+         printf("%d is largest.\n",num3);
     }
     return 0;
 }
