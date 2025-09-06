@@ -9,10 +9,10 @@ int main(){
     
     //Checking which number is largest
     if (num1>num2){
-        printf("%d is largest.",num1);
+        printf("%d is largest.\n",num1);
     }
     else{
-        printf("%d is largest.",num2);
+        printf("%d is largest.\n",num2);
     }
     return 0;
 }
