@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float a, b, c, discriminant, root1, root2, realPart, imagPart;
+    printf("General form of quaratic eqn: ax²+bx+c\n");
+    printf("Enter coefficients a, b and c: ");
+    scanf("%f %f %f", &a, &b, &c);
+
+    discriminant = (b * b) - 4 * a * c;
+    //formula = -b±√D/2a
+    // condition for real and different roots
+    if (discriminant > 0) {
+        root1 = (-b + sqrt(discriminant)) / (2 * a);
+        root2 = (-b - sqrt(discriminant)) / (2 * a);
+        printf("root1 = %f and root2 = %f\n", root1, root2);
+    }
+
+    // condition for real and equal roots
+    else if (discriminant == 0) {
+        root1 = root2 = -b / (2 * a);
+        printf("root1 = root2 = %f\n;", root1);
+    }
+
+    // if a=0 then eqn will be: (0)x²+bx+c = bx+c
+    else if (a==0) printf("The quadratic equation is not valid\n");
+
+    // if roots are not real:
+    // then, imaginary roots: root1=real_part+img_part, root2=real_part-img_part, i=iota = √-1
+    else {
+        realPart = -b / (2 * a);
+        imagPart = sqrt(-discriminant) / (2 * a);
+        printf("root1 = %f+%fi and root2 = %f-%fi\n", realPart, imagPart, realPart, imagPart);
+    }
+
+    return 0;
+} 
