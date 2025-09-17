@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main(){
+    int age_p1, age_p2, age_p3;
+    printf("Enter age of 1st person: ");
+    scanf("%d",&age_p1);
+    printf("Enter age of 2nd person: ");
+    scanf("%d",&age_p2);
+    printf("Enter age of 3rd person: ");
+    scanf("%d",&age_p3);
+
+    if(age_p1>age_p2 && age_p1>age_p3){
+        printf("1st person is the oldest(%d years).\n",age_p1);
+    }
+    else if(age_p2>age_p1 && age_p2>age_p3){
+        printf("2nd person is the oldest(%d years).\n",age_p2);
+    }
+    else{
+        printf("3rd person is the oldest(%d years).\n",age_p3);
+    }
+    return 0;
+}
