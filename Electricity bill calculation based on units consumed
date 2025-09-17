@@ -1,0 +1,44 @@
+// In india:
+// 0 – 100 units → ₹3.00 per unit
+// 101 – 200 units → ₹4.50 per unit
+// 201 – 400 units → ₹6.00 per unit
+// Above 400 units → ₹7.00 per unit
+// Electricity Duty / Surcharge → 10% of energy charges
+
+
+#include <stdio.h>
+
+int main() {
+    int units;
+    float amount, totalAmount, surcharge;
+
+    printf("Enter total units consumed: ");
+    scanf("%d", &units);
+
+    if (units <= 100) {
+        amount = units * 3.00;
+    }
+    else if (units <= 200) {
+        amount = (100 * 3.00) + (units - 100) * 4.50;
+    }
+    else if (units <= 400) {
+        amount = (100 * 3.00) + (100 * 4.50) + (units - 200) * 6.00;
+    }
+    else {
+        amount = (100 * 3.00) + (100 * 4.50) + (200 * 6.00) + (units - 400) * 7.00;
+    }
+
+    // Surcharge (Electricity duty 10%)
+    surcharge = amount * 0.10;
+
+    // Total bill = Energy charge + Surcharge
+    totalAmount = amount + surcharge;
+
+    printf("--- Electricity Bill ---\n");
+    printf("Energy Charge  : Rs. %f\n", amount);
+    printf("Surcharge (10%%): Rs. %f\n", surcharge);
+    printf("Total Bill     : Rs. %f\n", totalAmount);
+
+    return 0;
+}
+
