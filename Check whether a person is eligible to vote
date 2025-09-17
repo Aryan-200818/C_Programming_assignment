@@ -1,0 +1,10 @@
+// In major countries (including India) 18 or 18+ are people are eligible to vote.
+#include <stdio.h>
+int main(){
+    int age;
+    printf("Enter your age: ");
+    scanf("%d",&age);
+    if(age<18) printf("you cannot vote!!\n");
+    else printf("you can vote.\n");
+    return 0;
+}
