@@ -1,0 +1,39 @@
+// Let the grading system be:
+// Marks(Range)	    Grade
+// 91-100	  -      A1
+// 81-90	  -      A2
+// 71-80	  -      B1
+// 61-70	  -      B2
+// 51-60	  -      C1
+// 41-50	  -      C2
+// 33-40	  -      D
+// 21-32	  -      E1
+// 0-20	    -      E2
+
+#include<stdio.h>
+int main()
+{
+    float mark1, mark2, mark3, mark4, mark5, avg;
+    printf("Enter Marks obtained in 5 Subjects: ");
+    scanf("%f %f %f %f %f",&mark1,&mark2,&mark3,&mark4,&mark5);
+    avg = (mark1+mark2+mark3+mark4+mark5)/5;
+    printf("Grade: ");
+    if(avg>=90 && avg<=100)
+        printf("A1\n");
+    else if(avg>=80 && avg<90)
+        printf("A2\n");
+    else if(avg>=70 && avg<80)
+        printf("B1\n");
+    else if(avg>=60 && avg<70)
+        printf("B2\n");
+    else if(avg>=50 && avg<60)
+        printf("C1\n");
+    else if(avg>=40 && avg<50)
+        printf("C2\n");
+    else if(avg>=33 && avg<40)
+        printf("D\n");
+    else if(avg>=20 && avg<33)
+        printf("E1\n");
+    else printf("E2\n");
+    return 0;
+}
