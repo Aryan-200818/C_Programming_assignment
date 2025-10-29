@@ -16,6 +16,6 @@ int main(){
             n /= 10;
         }
     }
-    printf("Total number of digits in %d is: %d", og, count);
+    printf("Total number of digits in %d is: %d\n", og, count);
     return 0;
 }
